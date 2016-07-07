@@ -1,0 +1,32 @@
+[
+  {
+    "version": "1.0.3",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-0-3.zip",
+    "date": "2016-07-04T09:00:00-06:00",
+    "notes": [
+      "[Improved] Updated DOMPDF library files."
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-0-2.zip",
+    "date": "2016-04-04T09:09:00-06:00",
+    "notes": [
+      "[Added] Added plugin icon."
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-0-1.zip",
+    "date": "2016-03-25T10:10:00-06:00",
+    "notes": [
+      "[Improved] Upgraded DOMPDF library to 0.7, which adds PHP namespace support, object-based Options config, initial support for SVG, updated fonts, optimized performance, Unicode support, better float support, and more.",
+      "[Added] DOMPDF dropped support for PHP 5.3, so **Printmaker now requires PHP 5.4+**",
+      "[Improved] Added the ability to set config options via a handy `config/printmaker.php` settings file.",
+      "[Improved] Enabled remote images by default, because basically everybody uses them.",
+      "[Added] Added the `PdfModel->email()` method for sending generated PDFs as email attachments.",
+      "[Improved] Added Craft 2.5 goodies, like a nice juicy updates feed. **Printmaker now requires Craft 2.5+**",
+      "[Improved] Printmaker has officially graduated beta!"
+    ]
+  }
+]
