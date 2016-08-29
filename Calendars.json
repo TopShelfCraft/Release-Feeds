@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.1.7",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Craft-Calendars-1-1-7.zip",
+    "date": "2015-08-29T01:00:00-06:00",
+    "notes": [
+      "[Fixed] Fixed a bug where parameters passed as an Array to `EventCriteriaModel` were ignored. (How rude.)",
+      "[Added] Implemented the `repeats` and `repeatsForever` parameters on `EventCriteriaModel`.",
+      "[Added] Added a resource call to ensure that Timepicker JS loads before Calendars JS, to prevent an obscure error that might occur if Calendars fields are rendered before any other date/time inputs.",
+      "[Improved] Implemented a temporary workaround for an issue where Schedule Rules Editor components aren't rendered for newly created Commerce Variants.",
+      "[Improved] Updated Knockout JS library to v3.4.0.",
+      "[Improved] Fixed some typos in comments."
+    ]
+  },
+  {
     "version": "1.1.6",
     "downloadUrl": "https://topshelfcraft.com/downloads/Craft-Calendars-1-1-6.zip",
     "date": "2015-07-04T02:00:00-06:00",
