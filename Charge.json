@@ -1,0 +1,414 @@
+[
+  {
+    "version": "2.2.2",
+    "date": "2018-01-26T00:00:00+00:00",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-2-2.zip",
+    "notes": [
+      "[Added] Added `getPaymentById`, `getChargeById`, `getSubscriberByChargeId` methods to the `craft.charge` variable.",
+      "[Fixed] Fixed an issue where the default value of the `to` field in emails might not be populated. (h/t Benoît Rouleau)",
+      "[Fixed] Fixed a bug that caused a PHP error when sending recurring emails. (h/t Benoît Rouleau)",
+      "[Fixed] Added logic to update a user&#039;s membership subscription and user group when changing their plan with the `charge/updateSubscription` self-service endpoint. (h/t Benoît Rouleau)",
+      "[Improved] Updated for Top Shelf Craft transition."
+    ]
+  },
+  {
+    "version": "2.2.1",
+    "date": "2017-04-11T12:36:58+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] Fixed an issue with checking the state of Connect on some setups",
+      "[Fixed] Fixed an issue that would cause emails to fail to send for subscriptions when setup via the CP caused by a bad handle/name combo on the email trigger"
+    ]
+  },
+  {
+    "version": "2.2.0",
+    "date": "2017-04-09T20:11:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added full support for Stripe Connect. You can use Connect to build marketplaces, multi-vendor setups and more. Connect sub-accounts and collect application fees for payments with minimal extra setup. All Connect related features are handled via a new Connect fieldtype.",
+      "[Added] Added the ability to Update and move active subscriptions from the front-end. You can now let customers self-service and modify their active subscriptions. When changing their plan, all pricing and period differences will be automatically pro-rated, and updated dynamically.",
+      "[Added] Added a new onChang` trigger type. Triggered when a customer changes their subscription via the new self service updateSubscription options. ",
+      "[Added] Added support for custom error message translations on the front-end, just pass a config object with translations into the charge jquery helper",
+      "[Improved] Updated handling of subscription checks, and internal api checks to maintain better consistency through out our local records.",
+      "[Improved] Updated bundled stripe libraries to take advantage of new api options. ",
+      "[Improved] Updated logging to better handle rare edge case errors and fallbacks",
+      "[Improved] Updated compatibility checks for new cases and fixes",
+      "[Improved] Updated demo templates new improved starter account area templates.",
+      "[Fixed] Fixed too many bugs to list."
+    ]
+  },
+  {
+    "version": "2.1.8",
+    "date": "2016-11-29T17:29:08+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] Fixed a bug in the upgrade migration that would throw an error on some setups, causing the previous migration to fail.",
+      "[Fixed] Fixed a bug in the jquery.charge.js that would cause an error when used along side jQuery 3.x",
+      "[Added] Added support for supplying translated error messages as part of the charge js init"
+    ]
+  },
+  {
+    "version": "2.1.7",
+    "date": "2016-11-22T08:09:40+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added a new compatibility check within the settings area, with direct checks for most common causes of server issues (ie. TLS &lt; 1.2), along with steps to help fix. ",
+      "[Added] Added New Zealand Dollar (nzd) as a supported currency. ",
+      "[Added] Added new currency and plan amount direct options for displaying info in the charge overview table. ",
+      "[Fixed] Fixed a compatibility issue for the latest version of Craft, removing usage of CRAFT_BUILD, VERSION and TRACK.",
+      "[Fixed] Fixed an issue that stopped ordering of charges based on payment amount.",
+      "[Fixed] Fixed a bug where the payments currency symbol in the charge element table would incorrectly show as USD, regardless of the actual currency. "
+    ]
+  },
+  {
+    "version": "2.1.5",
+    "date": "2016-10-20T13:48:33+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Improved] Updated how the payments are retrieved for the main element view to massively improve performance on installs with a large number of payments.",
+      "[Improved] Updated how Charge stores it&#039;s license state to fix an intermittent bug on some Craft installs where the Pro edition state could be temporarily lost until the license was rechecked. ",
+      "[Improved] Updated the logging output help debug situation where the Stripe API rejects api calls due to installs having lower than TLS 1.2",
+      "[Fixed] Fixed a bug where a charge with a subscription could return a null subscription.",
+      "[Fixed] Fixed a bug in the CP where some filters wouldn&#039;t update the main element view."
+    ]
+  },
+  {
+    "version": "2.1.3",
+    "date": "2016-08-30T14:19:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] Fixed a bug where payments in live mode were mistakenly marked as paid in test mode. ",
+      "[Fixed] Fixed a bug in the included demo templates that was causing triggered actions on multiple choice plans to be silently ignored due to a bad naming error.",
+      "[Fixed] Fixed a bug in the way the email error conditions were logged. ",
+      "[Fixed] Cleaned up various legacy code references. ",
+      "[Fixed] Fixed a bug where guest registration would fail silently instead of returning a user side error.",
+      "[Fixed] Fixed up some left over debugging from guest registration setup.",
+      "[Improved] Updated the way guest registration post-activation behaves for some setups with non-standard site and user configurations.",
+      "[Improved] Updated the handling of guest registration logging to make it clearer in the Logs what&#039;s going on, and where any errors might be occurring. ",
+      "[Improved] Updated how invalid customer details are handled at the service level. Now creates customers that we were meant to have, but failed to find as needed.",
+      "[Improved] Updated the handling of an edge case where customers that have been removed from the Stripe api, but we still have recorded locally. Now we will catch the issue internally and create a new customer as required instead of returning a user visible &quot;No customer ..&quot; error. "
+    ]
+  },
+  {
+    "version": "2.1.2",
+    "date": "2016-08-01T12:21:11+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] Fixed a bug in the guest registration service caused by left over debugging."
+    ]
+  },
+  {
+    "version": "2.1.1",
+    "date": "2016-07-29T16:06:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] Fixed a php error that would be thrown within the CP for some charges without subscriptions."
+    ]
+  },
+  {
+    "version": "2.1.0",
+    "date": "2016-07-06T13:46:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] New Guest Registrations! Guest registrations let you register users directly as part of your payment forms, including all their user fields. Also Charge will keep track of the user and automatically suspend or remove their account at the end of their charge&#039;s life. Pair with user subscriptions for really powerful membership sites. ",
+      "[Added] New Self Service! With just a few simple tags your users can now self-service their recurring payment subscriptions. Give them new options to self-cancel their payments. ",
+      "[Added] New - Admins can now refund payments direct from the Charge admin area.",
+      "[Added] New - Admins can now cancel recurring subscriptions from the Charge admin area.",
+      "[Added] New - specify your Stripe public key directly on your form markup via data-stripeKey attributes, instead of just in your init js. ",
+      "[Improved] Updated demo templates to use cleaner javascript options.",
+      "[Improved] Updated the included javascript library for much cleaner setup to allow passing a config array.",
+      "[Improved] Updated the wording of webhook setup in the CP",
+      "[Improved] Updated the Charge Settings overview to include a more specific element setup reference.",
+      "[Improved] Updated the Charge element setting handling to be more explicit in the required settings.",
+      "[Improved] Updated the exception handling when dealing with action triggers to more cleanly fallback in error states.",
+      "[Improved] Updated the self-truncation of charge logs to be much smoother.",
+      "[Improved] Updated the default charge element view sort order so new Charges are at the top of the view.",
+      "[Improved] Updated the Charge element view to with a new Status indicator, with appropriate dynamic language if the charge was one-off, recurring, refunded, cancelled, expired and more.",
+      "[Improved] Updated various language and layout issues on the charge detail views.",
+      "[Improved] Added a user model to the Charge model to allow neat validation and user attachments.",
+      "[Improved] Added a Charge payment status enum. ",
+      "[Improved] Added support for Payment states.",
+      "[Improved] Added new debug error log levels. Only logged when the site is in devMode.",
+      "[Fixed] Fixed a bug on the license check handling, and reverted an earlier regression.",
+      "[Fixed] Fixed the some situations that would cause issues with the Charge logs when running with a non default database table prefix.",
+      "[Fixed] Removed some unneeded element settings on the charge view for better consistency with Craft&#039;s default views."
+    ]
+  },
+  {
+    "version": "2.0.4",
+    "date": "2016-06-01T15:36:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added a new example trigger to demo and test actions.",
+      "[Added] Added a new test log state",
+      "[Improved] Updated logging on membership subscription actions to be more helpful.",
+      "[Improved] Cleaned up some legacy functions in the webhook service. ",
+      "[Improved] Updated various CP template titles for better consistency.",
+      "[Improved] Renamed success template to thanks to match the demo templates.",
+      "[Fixed] Fixed a bug that would cause recurring actions to fail to fire",
+      "[Fixed] Fixed a bug that would stop recurring emails on membership subscriptions from always triggering correctly.",
+      "[Fixed] Fixed a meta data issue on recurring payments. Meta data now is included on customers, as well as payments. ",
+      "[Fixed] Fixed the color of the payment mode badge on the payment table in the Charge detail view."
+    ]
+  },
+  {
+    "version": "2.0.3",
+    "date": "2016-05-23T13:38:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added support for event-&gt;performAction = false to prevent any of the event hooks - onCharge, onBeforeCharge and onValidate from continuing",
+      "[Added] Added more useful error language and logging when the security event stops a payment submission. You&#039;ll now see a &quot;Charge 403 PCI Keys&quot; error for guests, and a more detailed explanation for admins.",
+      "[Added] Added support for third parties to specify a specific Stripe customer on a payment, in extension to how Charge detects a returning customer.",
+      "[Improved] Updated the security event to also trigger a detailed log item. ",
+      "[Improved] Renamed the success demo template to thanks to match the default path setting",
+      "[Improved] Updated some event log locations for better consistency.",
+      "[Improved] Tweaks on some CP log styles.",
+      "[Improved] Updated the bundled vendor package versions. ",
+      "[Fixed] Fixed and reintroduced the onValidate event",
+      "[Fixed] Fixed a bug in how saved payment cards are handled and reused.",
+      "[Fixed] Fixed a possible conflict with a legacy guzzle library in one of the vendor packages",
+      "[Fixed] Fixed a bug in a legacy migration that would cause an update to fail."
+    ]
+  },
+  {
+    "version": "2.0.2",
+    "date": "2016-05-17T10:27:57+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added a safety trim on the Stripe keys. Charge will now try to tidy up your api keys before assignment if you include whitespace. ",
+      "[Improved] Updated the log table views with some visual tweaks and cleanup",
+      "[Improved] Updated the handling of Connection validation calls to better work for test + live checks in the same call.",
+      "[Improved] Updated the bundled demo templates to use the combined card expiry field vs. separate month and year inputs.",
+      "[Fixed] Fixed a bug in the migration for upgrades from early 2.0 beta versions",
+      "[Fixed] Fixed a bug in the available mode connection validation caching."
+    ]
+  },
+  {
+    "version": "2.0.1",
+    "date": "2016-05-13T08:54:56+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added support for custom fields to be added to the table view on Charges",
+      "[Added] Added support for planCoupon as a legacy alias for the coupon, also for all errors and validation logic",
+      "[Fixed] Fixed an error in the migration that&#039;d cause some upgrades from some versions of 1.x to fail",
+      "[Fixed] Fixed the missing sub-nav sidebar when viewing the Charge settings page",
+      "[Fixed] Fixed an error on the charge model validation that would be thrown when used with custom validators",
+      "[Fixed] Fixed a missing onValidate event"
+    ]
+  },
+  {
+    "version": "2.0.0",
+    "date": "2016-05-11T15:54:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] Charge 2 is here! 2.0 brings massively powerful new features, along with a completely rewritten core. ",
+      "[New] New License model - now available in Free and Pro versions",
+      "[New] Emails - Charge can now send emails against charge events, recurring, failure, subscription start, end and more",
+      "[New] Membership Subscription - build out membership sites with ease",
+      "[New] Action Triggers - you can now specify extra actions to trigger after events, both immediately on success and against later events!",
+      "[New] Secured Payment Options - specify all your payment options with fully secure and lock down your payment forms",
+      "[New] Payment records - now Charge will keep track of all future payments against a Charge",
+      "[New] Field Support on Charges - you can now add fields and unlimited content to Charges",
+      "[New] Saved Cards support for all logged in users. Let your customers reuse their payment info with a single line in your templates",
+      "[New] More Currencies - take payments in over 160 currencies, all on the same site",
+      "[New] Stripe Checkout Support - get a payment page going in seconds with new Checkout support",
+      "[New] Activity Logs - keep track of every actions and reaction on your site",
+      "[New] Multi-Environment Config support - specify all your config keys in your config files for simple multi-enviroment support"
+    ]
+  },
+  {
+    "version": "1.5.1",
+    "date": "2016-01-29T16:28:29+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added the ability to delete Charges in the CP. ",
+      "[Added] Added the ability to filter charges in the CP by mode and type",
+      "[Improved] Updated meta data handling. Now meta data will apply both to the customer and child charges if they exist for the request that spawned them.",
+      "[Fixed] Fixed some styling issues when running on Craft 2.5",
+      "[Fixed] Fixed an issue on installs with mysql strict affecting coupon creation",
+      "[Fixed] Fixed an issue where Stripe now refers to a card type as card brand. Actual tags implementation is unchanged, but we now properly retain the data through from token creation",
+      "[Fixed] Fixed an issue where ajax triggered calls weren&#039;t always returning with enough error data to fully populate the form again if there were meta data errors attached."
+    ]
+  },
+  {
+    "version": "1.5.0",
+    "date": "2015-11-27T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added support for Craft 2.5 with new release feed, documentation url and icon sets.",
+      "[Added] Added full ajax return handling for the primary payment controller. Now you can submit your payments fully via ajax and get all the details back and ready to use. ",
+      "[Fixed] Fixed a number of bugs related to card type handling not being recorded properly in the CP",
+      "[Fixed] Fixed a php error related to php 5.3 strict conditions",
+      "[Improved] Updated the built in demo templates for better portability"
+    ]
+  },
+  {
+    "version": "1.4.5",
+    "date": "2015-09-04T16:32:37+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] A permissions error when creating and validating Coupons where the user wasn&#039;t an admin, but had been granted permissions to access the Charge CP",
+      "[Fixed] Some minor inconsistencies in variable formatting"
+    ]
+  },
+  {
+    "version": "1.4.4",
+    "date": "2015-07-17T12:04:32+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] A missing CSRF input on the backend coupon form that would prevent coupons from being created when csrf protection was enabled site wide."
+    ]
+  },
+  {
+    "version": "1.4.2",
+    "date": "2015-05-19T09:25:43+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] New coupon validation endpoint &#039;charge/coupon/validate&#039; for out of flow coupon validation. Details (here)[http://squarebit.co.uk/software/craft/charge/docs/coupon--validation]",
+      "[Improved] Handling of member edge cases",
+      "[Fixed] Static helper usage for some php enviroments"
+    ]
+  },
+  {
+    "version": "1.4.0",
+    "date": "2015-03-13T14:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] Charge now will attempt to find an existing customer record on Stripe for logged in users. If found it will reuse that record rather than creating a new customer and update all the values of that customer at the same time",
+      "[Added] Support for meta[] fields in the payment form. All values are stored both locally and passed to Stripe attached to the customer record.",
+      "[Added] Charge now records the stripe customer id for all purchases, available as {{ charge.stripeCustomerId }}",
+      "[Added] Charge now records the stripe payment id for one-time payments, available as {{ charge.stripePaymentId }}",
+      "[Improved] CP views to expose new links direct to the Stripe dashboard for customers and payments, as well as exposing any recorded meta data"
+    ]
+  },
+  {
+    "version": "1.3.9",
+    "date": "2015-03-06T15:49:11+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Additional details are now stored against each payment event for later identification",
+      "[Improved] CP views to expose more stripe information and link directly to the appropriate stripe customer and transaction where available",
+      "[Fixed] A possible error condition when hitting the payment controller with invalid data from an valid source",
+      "[Fixed] An unclear error message to help debugging situations"
+    ]
+  },
+  {
+    "version": "1.3.7",
+    "date": "2015-01-09T18:46:52+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] A bug that&#039;d throw an error on php 5.6.x where we were using a static method incorrectly",
+      "[Fixed] A bug that&#039;d sometimes prevent the CP payment views from fully loading",
+      "[Fixed] The hash() variable function which wasn&#039;t returning the correct criteria as documented ",
+      "[Improved] The readme and licenses with updated links"
+    ]
+  },
+  {
+    "version": "1.3.5",
+    "date": "2014-07-25T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] A minor record attribute type inconsistencies that would truncate our stored Stripe return records",
+      "[Fixed] A bug in the currency detection that would sometimes default the display currency to USD",
+      "[Fixed] A library issue that would throw an issue on some php environments"
+    ]
+  },
+  {
+    "version": "1.3.4",
+    "date": "2014-05-31T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] A left over debug message"
+    ]
+  },
+  {
+    "version": "1.3.3",
+    "date": "2014-05-09T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Improved] Stripe api usage for new subscription api setup",
+      "[Improved] A bug when creating a new non-recurring coupon in the CP",
+      "[Improved] How coupon values are calculated for better consistency",
+      "[Fixed] A message error where some error messages would be ignored when returning from the Stripe api, and a generic error would be shown in their place",
+      "[Fixed] A style inconsistency introduced in Craft 2.0"
+    ]
+  },
+  {
+    "version": "1.3.2",
+    "date": "2014-04-22T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Improved] Added small fix for a breaking change in Craft 2.0 in the Element model"
+    ]
+  },
+  {
+    "version": "1.3.1",
+    "date": "2014-04-08T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Fixed] A bug affecting coupon value calculation where we were being overly protective on minimum values"
+    ]
+  },
+  {
+    "version": "1.3.0",
+    "date": "2014-02-25T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] Added *Coupons* to Charge. You can now set one-off and recurring discounts using coupons",
+      "[New] Charge now locks into a specific Stripe API version. No need to worry about any breaking api changes!",
+      "[Improved] New attributes on the charge model for cleaner templating",
+      "[Improved] The bundled javascript library for nicer fallbacks",
+      "[Improved] The Stripe api library to the latest version to use the new api options",
+      "[Improved] Added a progress indicator option to the built in charge.js library. If you don&#039;t specify any value, the charge.js will look for an element with the class &#039;charge-indicator&#039;",
+      "[Fixed] A bug in the record logic that&#039;d sometimes get confused by character encodings",
+      "[Fixed] A migration bug that would fail to create some foriegn keys on some mysql setups",
+      "[Fixed] A migration bug that would leave a version with some orphaned data"
+    ]
+  },
+  {
+    "version": "1.2.0",
+    "date": "2013-12-13T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] Added *descriptions* to the Charge model. You can now set a description simply for any payment. That value will be passed over to Stripe and is used there as the email receipt subject",
+      "[Improved] Under the hood reworking of model handling for better consistency",
+      "[Improved] Improved card address handling. Now all possible data is passed and recorded",
+      "[Improved] Removed some redundant record calls to better support developers overloading the logic routines",
+      "[Improved] The CP detail view is slightly tweaked and now displays *description* details",
+      "[Improved] Added key indexes to searchable indexes in the Charge record",
+      "[Improved] Card expiry details are now recorded locally",
+      "[Improved] Better handling for User based transactions in our records. Useful if you need to tie Charges against users later",
+      "[Fixed] A minor formatting bug on some calls to the Stripe api"
+    ]
+  },
+  {
+    "version": "1.1.0",
+    "date": "2013-11-27T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] Added a spiffy full detail view for each charge in the CP",
+      "[Added] A new *Notes* field for admin use per transaction",
+      "[Added] Full handling and fallbacks to save all the information we can that comes back from Stripe. (update your front-end forms to get all the data)",
+      "[Added] Now supports all possible Stripe currencies, including all &lt;em&gt;beta&lt;/em&gt; currencies. Covering : *usd, gbp, eur, cad, aud, hkd, sek, dkk, pen* and *jpy*. Check your Stripe account to see what&#039;s available for your account.",
+      "[Improved] Improved wording in the CP table view for recurring transactions",
+      "[Improved] Tightened up the CP settings form",
+      "[Improved] Re-factored internal models for consistency",
+      "[Improved] Updated bundled charge.js for better error handling",
+      "[Improved] Added new default fallbacks for various simple uses",
+      "[Improved] *formatCard* and *formatPlanAmount* now accept extra arguments to tweak the return form",
+      "[Fixed] A bug that would stop the internal search service picking up new transactions without a forced clear",
+      "[Fixed] A bug that would stop the live private key from saving properly",
+      "[Fixed] A bug that would stop planInterval being properly stored in some cases",
+      "[Fixed] An issue for some migrations for users on older test versions (&lt;1.0 versions)"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "date": "2013-11-14T00:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] First Public Release"
+    ]
+  }
+]
+    
