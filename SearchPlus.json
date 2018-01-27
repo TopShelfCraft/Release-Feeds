@@ -1,0 +1,194 @@
+[
+  {
+    "version": "1.5.2",
+    "date": "2018-01-26T00:00:004+00:00",
+    "downloadUrl": "https://topshelfcraft.com/downloads/SearchPlus-1-5-2.zip",
+    "notes": [
+      "[Improved] Updated Algolia SDK",
+      "[Improved] Updated for Top Shelf Craft transition."
+    ]
+  },
+  {
+    "version": "1.1.8",
+    "date": "2016-11-22T08:05:28+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-118.zip",
+    "notes": [
+      "[Fixed] Fixed a compatibility issue with the latest release of Craft. Removed depreciated usage of CRAFT_BUILD, TRACK, VERSION. "
+    ]
+  },
+  {
+    "version": "1.1.7",
+    "date": "2016-10-21T11:13:00+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-117.zip",
+    "notes": [
+      "[Fixed] Fixed a bug where a check on supported element ids would cause an entry save event to fail"
+    ]
+  },
+  {
+    "version": "1.1.6",
+    "date": "2016-10-20T13:45:26+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-116.zip",
+    "notes": [
+      "[Improved] Updated how the internal License state is stored to fix an intermittent bug on some installs.",
+      "[Improved] Updated the handling of Commerce product variants to more fully map them as part of the default mapping. Variants are now included in a variants array, and the default variant also in a defaultVariant item.",
+      "[Fixed] Fixed a bug in Commerce&#039;s event triggering that passed old or empty data on a products default price, sku when an item was saved the first time.",
+      "[Fixed] Fixed a bug where variant updates after a purchase wouldn&#039;t trigger an index update with the available quantity update."
+    ]
+  },
+  {
+    "version": "1.1.4",
+    "date": "2016-07-08T12:49:14+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-114.zip",
+    "notes": [
+      "[Fixed] Fixed the free item population limit which should have been set to 250 items per index. "
+    ]
+  },
+  {
+    "version": "1.1.3",
+    "date": "2016-06-29T15:10:56+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-113.zip",
+    "notes": [
+      "[Fixed] Fixed a bug where valid license keys were being marked as invalid during the license checks."
+    ]
+  },
+  {
+    "version": "1.1.2",
+    "date": "2016-06-22T09:18:58+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-112.zip",
+    "notes": [
+      "[Improved] Updated the population transfer to be less memory intensive to bypass memory issues on low memory servers, with large size individual items. ",
+      "[Improved] Updated the bundled composer libraries.",
+      "[Fixed] Fixed a bug where mapping nested elements that hit the max map depth would cause the parent item to be marked invalid because we were not resetting our depth counter properly.",
+      "[Fixed] Fixed a license check issue that would cause a valid license to sometimes fail to properly set the right state.",
+      "[Fixed] Fixed up the mapping system to explicitly clear out any left over mapped, but failed items when starting a new population task.",
+      "[Fixed] Fixed an issue where some non-entry elements would report themselves as entries during a delete action, and would incorrectly trigger a delete action from the indexes. "
+    ]
+  },
+  {
+    "version": "1.1.1",
+    "date": "2016-04-08T10:15:02+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-111.zip",
+    "notes": [
+      "[Fixed] Fixed an issue where url history pop states would trigger on the first load even when the search on load false was passed",
+      "[Fixed] Fixed a bug where Matrix fields weren&#039;t being fully parsed in the basic mapping",
+      "[Fixed] Fixed a bug where Shortlist item updates would erroneously trigger an entry updated event ",
+      "[Fixed] Fixed a bug where the basic mapping could thrown an error when triggered with bad keys. Failures are now caught and skipped where possible.",
+      "[Improved] Updated the versions of some internal search libraries"
+    ]
+  },
+  {
+    "version": "1.1.0",
+    "date": "2016-03-16T13:31:13+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-110.zip",
+    "notes": [
+      "[New] New - search plus now supports commerce products!",
+      "[Added] Added a new searchPlus_alterBasicItemMapping hook to help developers alter the basic mapping output",
+      "[Added] Add support for mapping of asset transforms. Now all possible transforms are included on the mapped assets and accessible in your templates",
+      "[Added] Added support for simple faceting setup when using the searchplus.js helper",
+      "[Improved] Updated how the basic mapping maps content. Now neatly handles all sorts of field content, including relationships ",
+      "[Improved] Updated how the content population runs to use a new 3 step process of collection, mapping and upload which uses the Craft background tasks and massively improves performance",
+      "[Fixed] Fixed a bug where mapping a user with content that&#039;s been deleted would throw an error",
+      "[Fixed] Fixed a mapping issue where content using matrixes as the sole source of content would sometimes fail",
+      "[Fixed] Fixed an issue where content wouldn&#039;t be properly mapped if the item was in a draft state",
+      "[Fixed] Fixed a bug where bulk item actions to change statuses wouldn&#039;t be properly triggering item updates",
+      "[Fixed] Fixed a handful of UI inconsistencies in the edit views",
+      "[Fixed] Fixed a bug that would prevent the index settings from being edited if the content map had changed",
+      "[Fixed] Fixed an issue that prevented users from renaming index handles"
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2016-02-12T15:32:00+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-101.zip",
+    "notes": [
+      "[Improved] Updated handling of lightswitch and number fields on mapping. Now maps to bool and floats respectively to allow better behaviours with Algolia filters",
+      "[Improved] Updated licence check logic. License checks now only occur every 24 hours at maximum while in the CP. ",
+      "[Fixed] Fixed a bug that would cause some entries to fail to save with a php error if the postDate wasn&#039;t set to a real date",
+      "[Fixed] Fixed a bug where entry statues updated in bulk wouldn&#039;t trigger a resync of the content state in the indexes"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "date": "2016-01-19T00:36:04+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-100.zip",
+    "notes": [
+      "[New] New! Search Plus 1.0 has landed",
+      "[Added] Added internal licensing and update handling",
+      "[Fixed] Fixed an issue where index counts would appear off for some locale setups",
+      "[Fixed] Fixed some issues that would cause mappings to fail with some unusual entry format setups",
+      "[Added] Fixed lots of niggles for the 1.0 release"
+    ]
+  },
+  {
+    "version": "0.9.0",
+    "date": "2016-01-15T17:40:00+00:00",
+    "downloadUrl": "https://squarebit.co.uk/assets/uploads/versions/SearchPlus-090.zip",
+    "notes": [
+      "[Improved] Updated lots of internal handling ",
+      "[Added] Added handling for external indexes",
+      "[Added] Added more front-end handling",
+      "[Fixed] Fixed issues relating to multi-indexes",
+      "[Improved] Updated the handling of batch element actions for better delete, update behaviour from the element index views",
+      "[Improved] Added lots of new things in prep for 1.0 "
+    ]
+  },
+  {
+    "version": "0.8.1",
+    "date": "2015-12-18T13:49:00+00:00",
+    "downloadUrl": "https://www.dropbox.com/s/i1j8wmdnomwkv2h/SearchPlus-081.zip?dl=0",
+    "notes": [
+      "[Added] Added new additional support for third party mapping ",
+      "[Fixed] Fixed an issue with population hangs on some edge case setups",
+      "[Fixed] Fixed an issue with the edition handling code",
+      "[Fixed] Fixed an issue related to third party mappings and validation of the return data "
+    ]
+  },
+  {
+    "version": "0.8.0",
+    "date": "2015-12-13T13:47:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[New] New - added full support for multiple Entry sections in the same index",
+      "[Added] Added the base for generic element handling ",
+      "[Improved] Updated the population handling logic to allow generic handling of elements with better fallbacks",
+      "[Added] Added early stage multiuenviroment handling"
+    ]
+  },
+  {
+    "version": "0.7.0",
+    "date": "2015-12-01T13:46:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Added] Added support for alternative mapping test views in the admin area",
+      "[Added] Added early support for upcoming edition levels",
+      "[Fixed] Fixed a load of population bugs",
+      "[Fixed] Fixed an issue where failed mappings would prevent an item from properly saving "
+    ]
+  },
+  {
+    "version": "0.6.1",
+    "date": "2015-11-09T12:00:00+00:00",
+    "downloadUrl": "https://www.dropbox.com/s/e53g8r7jgpb8cxi/SearchPlus-061.zip?dl=0",
+    "notes": [
+      "[Added] Added Breadcrumbs throughout the CP views and fixed some minor view inconsistencies.",
+      "[Added] Added early test Edition handling. Not currently hooked up or required during the beta.",
+      "[Fixed] Fixed an issue where Algolia settings were not being properly saved when used without a direct config option.",
+      "[Fixed] Fixed an issue where correct Algolia settings were not being validated properly on the first pass."
+    ]
+  },
+  {
+    "version": "0.6.0",
+    "date": "2015-11-06T14:00:00+00:00",
+    "downloadUrl": "",
+    "notes": [
+      "[Beta] Beta - first private Beta release",
+      "[New] New - Plugin Icons for Craft 2.5 support",
+      "[New] New - Combined JS library for single line JS usage",
+      "[Added] Added the Ability to preview and test mappings within the Settings pages",
+      "[Added] Added an install check for php versions",
+      "[Improved] Updated with overall settings update for Craft 2.5",
+      "[Improved] Updated lots and lots of things"
+    ]
+  }
+]
+
