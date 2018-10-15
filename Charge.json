@@ -1,5 +1,13 @@
 [
   {
+    "version": "2.2.3",
+    "date": "2018-10-14T00:00:00+00:00",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-2-3.zip",
+    "notes": [
+      "[Fixed] Removed deprecated Stripe endpoint in TLS test method, which prevents TLS version warnings from being displayed erroneously."
+    ]
+  },
+  {
     "version": "2.2.2",
     "date": "2018-01-26T00:00:00+00:00",
     "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-2-2.zip",
