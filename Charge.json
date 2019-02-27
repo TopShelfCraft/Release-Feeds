@@ -1,5 +1,13 @@
 [
   {
+    "version": "2.2.4",
+    "date": "2019-02-27T00:00:00+00:00",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-2-4.zip",
+    "notes": [
+      "[Improved] Updated Guzzle and other dependencies, making Charge PHP 7.2 compatible."
+    ]
+  },
+  {
     "version": "2.2.3",
     "date": "2018-10-14T00:00:00+00:00",
     "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-2-3.zip",
