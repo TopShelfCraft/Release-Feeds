@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.3.0",
+    "date": "2019-04-17T00:00:00+00:00",
+    "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-3-0.zip",
+    "notes": [
+      "[Added] Added `getCustomerByUserId` method.",
+      "[Improved] Hid User-Group-related subscription functions on non-Pro Craft installs, since User Groups are a Craft Pro feature.",
+      "[Fixed] Fixed an Elevated Session error message that could appear when managing Subscribers.",
+      "[Fixed] Fixed a error that occurred when sorting Charges by Type.",
+      "[Fixed] Charge no longer allows Craft to provide a sortable attributes list for Charge elements, due to a bug in Craft that caused errors when attempting to sort by those custom field values."
+    ]
+  },
+  {
     "version": "2.2.4",
     "date": "2019-02-27T00:00:00+00:00",
     "downloadUrl": "https://topshelfcraft.com/downloads/Charge-2-2-4.zip",
