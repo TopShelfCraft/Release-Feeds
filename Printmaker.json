@@ -1,7 +1,16 @@
 [
   {
+    "version": "1.4.0",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.4.0.zip",
+    "date": "2020-06-19T11:11:11-06:00",
+    "notes": [
+      "[Improved] Updated DOMPDF library files.",
+      "[Improved] Clean output buffer before streaming to prevent sending glitchy PDF to browser."
+    ]
+  },
+  {
     "version": "1.3.2",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-3-2.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.3.2.zip",
     "date": "2018-06-22T11:11:11-06:00",
     "notes": [
       "[Improved] Updated DOMPDF library files, resolving compatibility issues with PHP 7.2."
@@ -9,7 +18,7 @@
   },
   {
     "version": "1.3.1",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-3-1.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.3.1.zip",
     "date": "2017-12-10T11:11:11-06:00",
     "notes": [
       "[Improved] Updated DOMPDF library files."
@@ -17,7 +26,7 @@
   },
   {
     "version": "1.3.0",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-3-0.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.3.0.zip",
     "date": "2017-11-20T11:11:11-06:00",
     "notes": [
       "[Added] Added Twig extension to provide a `printmaker` global variable as a shortcut to `craft.printmaker`.",
@@ -26,7 +35,7 @@
   },
   {
     "version": "1.2.0",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-2-0.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.2.0.zip",
     "date": "2017-10-10T16:17:18-06:00",
     "notes": [
       "[Improved] Updated DOMPDF library files."
@@ -34,7 +43,7 @@
   },
   {
     "version": "1.1.0",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-1-0.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.1.0.zip",
     "date": "2017-05-25T13:00:00-06:00",
     "notes": [
       "[Improved] Updated DOMPDF library files.",
@@ -43,7 +52,7 @@
   },
   {
     "version": "1.0.3",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-0-3.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.0.3.zip",
     "date": "2016-07-04T09:00:00-06:00",
     "notes": [
       "[Improved] Updated DOMPDF library files."
@@ -51,7 +60,7 @@
   },
   {
     "version": "1.0.2",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-0-2.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.0.2.zip",
     "date": "2016-04-04T09:09:00-06:00",
     "notes": [
       "[Added] Added plugin icon."
@@ -59,7 +68,7 @@
   },
   {
     "version": "1.0.1",
-    "downloadUrl": "https://topshelfcraft.com/downloads/Printmaker-1-0-1.zip",
+    "downloadUrl": "https://github.com/TopShelfCraft/Printmaker/archive/1.0.1.zip",
     "date": "2016-03-25T10:10:00-06:00",
     "notes": [
       "[Improved] Upgraded DOMPDF library to 0.7, which adds PHP namespace support, object-based Options config, initial support for SVG, updated fonts, optimized performance, Unicode support, better float support, and more.",
